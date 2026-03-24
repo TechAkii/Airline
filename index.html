@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLuxe</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#" class="nb-logo">
+            <div class="nb-logo-icon">✈</div>
+            <div class="nb-logo-text">Air<span>Book</span></div>
+        </a>
+
+        <ul class="nb-links">
+            <li><a href="#" class="active">Search</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">My Trips</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+
+        <div class="nb-right">
+            <div class="nb-currency">USD ▾</div>
+            <button class="nb-signin">Sign in</button>
+            <button class="nb-cta">Book now ✈</button>
+        </div>
+
+        <div class="nb-hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="nb-mobile-menu" id="mobileMenu">
+        <a href="#" class="active">Search</a>
+        <a href="#">Destinations</a>
+        <a href="#">My Trips</a>
+        <a href="#">Deals</a>
+        <a href="#">Support</a>
+
+        <div class="nb-mobile-actions">
+            <button class="nb-signin">Sign in</button>
+            <button class="nb-cta">Book now</button>
+        </div>
+    </div>
+
+    <section id="home" aria-label="Welcome">
+        <div class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <img src="plane.png" alt="Hero section Image" loading="eager" fetchpriority="high">
+            </div>
+
+            <div class="hero-ov" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <h1>
+                    <span class="static-line">Fly anywhere,</span>
+                    <span class="dynamic-line" id="dynamic"><span class="cursor"></span></span>
+                </h1>
+                <p class="subtitle">Search hundreds of airlines. Book in seconds.</p>
+            </div>
+
+            <div class="flights-book">
+                <div class="trip-types">
+                    <span class="topic active" data-type="round-trip">Round Trip</span>
+                    <span class="topic" data-type="one-way">One Way</span>
+                    <span class="topic" data-type="multi-city">Multi City</span>
+                </div>
+
+                <div class="content">
+                    <div class="from airport-box">
+                        <p>FROM</p>
+                        <input type="text" id="fromAirport" placeholder="Type departure city or airport"
+                            autocomplete="off">
+                        <div id="fromResults" class="airport-results"></div>
+                    </div>
+
+                    <div class="from airport-box">
+                        <p>TO</p>
+                        <input type="text" id="toAirport" placeholder="Type destination city or airport"
+                            autocomplete="off">
+                        <div id="toResults" class="airport-results"></div>
+                    </div>
+
+                    <div class="from">
+                        <p>DEPART</p>
+                        <input type="date" id="departDate">
+                    </div>
+
+                    <div class="from">
+                        <p>PASSENGERS</p>
+                        <select id="passengers">
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5">5 Passengers</option>
+                            <option value="6">6 Passengers</option>
+                            <option value="7">7 Passengers</option>
+                        </select>
+                    </div>
+
+                    <div class="from search-btn-box">
+                        <button class="search-btn">Search Flights</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-content">
+            <p>SKYWARDS +</p>
+            <h1>
+                Enhance your benefits with Skywards+
+            </h1>
+            <hr>
+            <h3>
+                Choose from 3 packages loaded with what you love, from airport lounge access and ecxtra baggage
+                allowence, to exxclusive Cash+Miles rates and discounts.
+            </h3>
+            <a href="">
+                <button>
+                    Learn More
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="blog">
+        <p>Flying with Emirates</p>
+        <h1>Make it an incredible journey</h1>
+        <h3>Explore the Emirates experience and plan an unforgettable trip beyond your flight.</h3>
+
+        <div class="features-card">
+            <div class="image-card">
+                <img src="First_class/first-class-dessert.png" alt="">
+                <div class="image-text">
+
+                    <p> CABIN FREATURES</p>
+                    <h2>First Class</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="Business_class/business-class-meal.png" alt="">
+                <div class="image-text">
+
+                    <p> CABIN FREATURES</p>
+                    <h2> Business Class</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="Economy_Class/economy-menu.png" alt="">
+                <div class="image-text">
+
+                    <p> CABIN FREATURES</p>
+                    <h2>Economy Class</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="about">
+    <div class="sector1">
+        <p>ABOUT US</p>
+        <h1>Why travelers choose AirBook</h1>
+        <hr>
+        <h3>
+            We make booking flights simple, fast, and reliable. From finding the best destinations
+            to enjoying a smooth booking experience, AirBook is built to help you travel smarter.
+        </h3>
+    </div>
+
+    <div class="sector2">
+        <div class="about-card">
+            <h2>Best Flight Deals</h2>
+            <p>
+                Compare fares and discover affordable prices for your next journey with ease.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h2>Easy Booking</h2>
+            <p>
+                Search, compare, and confirm your trip in just a few simple steps.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h2>24/7 Support</h2>
+            <p>
+                Our team is always available to help you with changes, questions, and travel support.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="services-heading">
+        <p>WHY CHOOSE US</p>
+        <h1>Your comfort is our priority</h1>
+        <hr>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-box">
+            <h2>Global Destinations</h2>
+            <p>Travel to hundreds of cities worldwide with trusted airline partners.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Secure Payments</h2>
+            <p>Book confidently with protected payment methods and safe transactions.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Flexible Choices</h2>
+            <p>Choose round-trip, one-way, or multi-city options for every journey.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Premium Experience</h2>
+            <p>Enjoy a modern booking platform designed for speed, elegance, and convenience.</p>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <div class="newsletter-content">
+        <p>NEWSLETTER</p>
+        <h1>Stay updated with the latest offers</h1>
+        <hr>
+        <h3>
+            Subscribe to receive travel inspiration, exclusive discounts, and updates from AirBook.
+        </h3>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>AirBook</h2>
+            <p>
+                Book flights with confidence and explore the world with comfort, style, and ease.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Search Flights</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: support@airbook.com</p>
+            <p>Phone: +94 77 123 4567</p>
+            <p>Location: Colombo, Sri Lanka</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 AirBook. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
