@@ -231,7 +231,10 @@ function setupFlightSearch() {
 }
 
 
-
+function filterDest(btn) {
+    document.querySelectorAll('.dest-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
 
 
 

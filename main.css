@@ -244,12 +244,10 @@ nav {
 .hero-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(7, 15, 30, 0.52) 0%,
-        rgba(18, 34, 63, 0.28) 45%,
-        rgba(4, 11, 24, 0.55) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(7, 15, 30, 0.52) 0%,
+            rgba(18, 34, 63, 0.28) 45%,
+            rgba(4, 11, 24, 0.55) 100%);
     z-index: 1;
     pointer-events: none;
 }
@@ -922,6 +920,7 @@ nav {
 }
 
 @media (max-width: 992px) {
+
     .nb-links,
     .nb-right {
         display: none;
@@ -1052,5 +1051,294 @@ nav {
     .image-text p {
         font-size: 13px;
         letter-spacing: 2px;
+    }
+}
+
+.dest {
+    background: #f8faff;
+    padding: 5rem 2.5rem;
+}
+
+.dest-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dest-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+}
+
+.section-tag::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #2563eb;
+    border-radius: 2px;
+}
+
+.dest-top h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: #0a1628;
+    line-height: 1.15;
+}
+
+.dest-top h2 em {
+    font-style: normal;
+    color: #2563eb;
+}
+
+.dest-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dest-filter {
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dest-filter:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.dest-filter.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
+.dest-featured {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.dest-card {
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.dest-card:hover .dest-img {
+    transform: scale(1.06);
+}
+
+.dest-card:hover .dest-card-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dest-img {
+    width: 100%;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.dest-card-large .dest-img {
+    height: 340px;
+    background: linear-gradient(160deg, #1a3a6e 0%, #0f2a52 50%, #0a1628 100%);
+}
+
+.dest-sm-top .dest-img {
+    height: 160px;
+    background: linear-gradient(160deg, #1a4a3a 0%, #0f3a2a 60%, #0a2018 100%);
+}
+
+.dest-sm-bot .dest-img {
+    height: 160px;
+    background: linear-gradient(160deg, #3a1a0a 0%, #2a0f0a 60%, #1a0808 100%);
+}
+
+.dest-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(6, 14, 31, 0.85) 0%, rgba(6, 14, 31, 0.1) 55%, transparent 100%);
+}
+
+.dest-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+}
+
+.dest-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.5rem;
+}
+
+.dest-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 4px;
+}
+
+.dest-card-sm .dest-name {
+    font-size: 1.05rem;
+}
+
+.dest-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dest-price {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.dest-price strong {
+    color: #fff;
+    font-size: 15px;
+}
+
+.dest-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 3px 8px;
+}
+
+.dest-card-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0a1628;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.3s, transform 0.3s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dest-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.dest-card-mini {
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dest-card-mini:hover .dest-img {
+    transform: scale(1.06);
+}
+
+.dest-card-mini .dest-img {
+    height: 130px;
+}
+
+.dest-mini-1 .dest-img {
+    background: linear-gradient(160deg, #1a2a4e 0%, #0a1a3e 100%);
+}
+
+.dest-mini-2 .dest-img {
+    background: linear-gradient(160deg, #2e1a4e 0%, #1a0a3e 100%);
+}
+
+.dest-mini-3 .dest-img {
+    background: linear-gradient(160deg, #4e2a1a 0%, #3e1a0a 100%);
+}
+
+.dest-mini-4 .dest-img {
+    background: linear-gradient(160deg, #1a4e2a 0%, #0a3e1a 100%);
+}
+
+.dest-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.dest-view-all {
+    padding: 10px 28px;
+    background: none;
+    border: 1.5px solid #2563eb;
+    border-radius: 8px;
+    color: #2563eb;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dest-view-all:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+@media (max-width: 680px) {
+    .dest-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .dest-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dest-card-large .dest-img {
+        height: 240px;
     }
 }
